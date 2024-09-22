@@ -79,17 +79,14 @@ provide the repo url and set the Pull SCM ( H/3 * * * * )
 save
 
 create new job called k8s-deployment
-select freestyle
+select pipeline
 select add time stamps
-then go to build actions select execute shell and write the below command to apply the deployment
+then go to build actions to build pipeline
+and paste the jenkins pipeline from this repo to jenkins 
 
-```bash
-cd ${JENKINS_HOME}/workspace/clone # we need to be in the path for the deployment file, you can use pwd for the exact path
-kubectl apply -f deployment-1.yml
-```
 note that you need to be at the jenkins repo inside the user and workspace dir
 
-we need to set the deploy after clone beacuse there is no image build since we already have it 
+we need to set the deploy after clone because there is no image build since we already have it 
 
 
 after editing anything in the repo the jenkins will be triggered
