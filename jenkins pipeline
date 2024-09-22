@@ -1,0 +1,27 @@
+pipeline {
+    agent any  // This means the pipeline will run on any available Jenkins agent
+    
+    environment {
+        // Set any environment variables you need. In this case, JENKINS_HOME is a default environment variable in Jenkins
+        WORKSPACE_PATH = "${JENKINS_HOME}/workspace/clone" 
+    }
+
+    stages {
+        stage('Deploy with Kubernetes') {
+            steps {
+                // Navigate to the directory and run the kubectl command
+                script {
+                    dir("${WORKSPACE_PATH}") {
+                        sh 'kubectl apply -f deployment-1.yml'
+                    }
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Finished deployment process'
+        }
+    }
+}
