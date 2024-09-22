@@ -1,4 +1,4 @@
-# CI-CD-k8s-w-jenkins-pipeline
+# CI-CD-k8s-w-jenkins-pipeline script
 
 
 Clone the repo to your machine
