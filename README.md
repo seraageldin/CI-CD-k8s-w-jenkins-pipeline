@@ -72,22 +72,14 @@ then to save you need to click :wq! to save teh changes and exit
 ```
 
 #then now we need to go to jenkins and create our jobs 
-create a freestyle clone job to clone from github repo
+create a pipeline k8s job to clone from github repo and deploy automatically
 select add timestamps
+add the github repo link
 do not forget to select the main branch
-provide the repo url and set the Pull SCM ( H/3 * * * * )
+paste the jenkins pipeline into jenkins 
 save
 
-create new job called k8s-deployment
-select pipeline
-select add time stamps
-then go to build actions to build pipeline
-and paste the jenkins pipeline from this repo to jenkins 
-
 note that you need to be at the jenkins repo inside the user and workspace dir
-
-we need to set the deploy after clone because there is no image build since we already have it 
-
 
 after editing anything in the repo the jenkins will be triggered
 
