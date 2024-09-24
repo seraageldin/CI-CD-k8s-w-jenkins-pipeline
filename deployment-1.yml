@@ -10,13 +10,13 @@ spec:
     matchLabels:
       app: app
   strategy: 
-    type: RollingUpdate
+    type: ReCreate
   template:
     metadata:
       labels:
         app: app
     spec:
       containers:
-      - image: httpd
-        name: httpd
+      - image: nginx
+        name: nginx
         resources: {}
