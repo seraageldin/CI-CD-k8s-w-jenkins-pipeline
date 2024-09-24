@@ -76,7 +76,7 @@ create a pipeline k8s job to clone from github repo and deploy automatically
 select add timestamps
 add the github repo link
 do not forget to select the main branch
-paste the jenkins pipeline into jenkins
+paste the jenkins pipeline into jenkins pipeline script
 build trigger poll SCM H/3 * * * *
 save
 
