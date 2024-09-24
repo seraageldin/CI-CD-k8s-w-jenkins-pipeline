@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         // Set any environment variables you need. In this case, JENKINS_HOME is a default environment variable in Jenkins
-        WORKSPACE_PATH = "${JENKINS_HOME}/workspace/clone" 
+        WORKSPACE_PATH = "${JENKINS_HOME}/workspace/k8s" 
     }
 
     stages {
